@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import { Welcome } from "./Welcome";
 
 
-describe("Welcome component", () => {
+describe.skip("Welcome component", () => {
 test("renders Welcome without name", () => {
   render(<Welcome />);
   const welcomeElement = screen.getByText(/Welcome/i);
@@ -19,3 +19,5 @@ test("renders Welcome name", () => {
 
 //optionalnie oddzielny describe
 //nazwa spec oddzielnie od test
+
+//TYLKO DLA TESTU  NORMALNIE UZYWAMY TEST.TSX

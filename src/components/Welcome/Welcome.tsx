@@ -1,9 +1,8 @@
+import { WelcomeProps } from "./Welcome.types"
 
-type WelcomeProps = {
-    name?: string
-}
+
 export const Welcome = (props: WelcomeProps) => {
   return (
-    <div>Welcome {props.name}</div>
+    <div>Welcome {props.name ? props.name : "Guest"}</div>
   )
 }
