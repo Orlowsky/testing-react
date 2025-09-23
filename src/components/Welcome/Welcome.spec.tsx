@@ -18,3 +18,4 @@ test("renders Welcome name", () => {
 
 
 //optionalnie oddzielny describe
+//nazwa spec oddzielnie od test
