@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { logRoles, render, screen } from "@testing-library/react";
 import { Skills } from "./Skills";
 
 describe("Skills", () => {
@@ -34,16 +34,19 @@ describe("Skills", () => {
   })
 
   test("Start Learning button is eventually displayed", async () => {
-  render(<Skills skills={skills} />);
+  const view = render(<Skills skills={skills} />);
+    //logRoles(view.container);
+  //screen.debug();
   //findBy - returns a promise and we need to await it
   //use when you expect an element to appear after some time
   //all sufixes are same - get, query, find and are Role, LabelText, PlceholderText, Text, DisplayValue, AltText, Title, TestId
   const startLearningButton = await screen.findByRole("button", {
      name: "Start Learning"
      },{ timeout: 2000 });
+    //screen.debug();
     expect(startLearningButton).toBeInTheDocument();
 
-})
+}) 
 });
 
 //pierwszy argunment to textMatch - string lub regex, funkcja lub obiekt
