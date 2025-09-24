@@ -2,8 +2,9 @@ import { render, screen } from "@testing-library/react";
 import { Application } from "./Application";
 
 describe("Application", () => {
-    test("renders correctly Application component", () => {
+    test("renders correctly Application component getByRole", () => {
         render(<Application />)
+        //getByRole
         const pageHeadingElement = screen.getByRole("heading", {
             level: 1
         })
@@ -19,6 +20,12 @@ describe("Application", () => {
         })
         expect(nameElement).toBeInTheDocument()
 
+        //getByLabelText
+        const nameElementByLabelText = screen.getByLabelText("Name", {
+            selector: "input"
+        })
+        expect(nameElementByLabelText).toBeInTheDocument()
+
         const bioElement = screen.getByRole("textbox", {
             name: "Bio"
         })
@@ -29,6 +36,9 @@ describe("Application", () => {
 
         const termsElement = screen.getByRole("checkbox")
         expect(termsElement).toBeInTheDocument()
+
+        const termsElementByLabelText = screen.getByLabelText("I accept the terms and conditions")
+        expect(termsElementByLabelText).toBeInTheDocument()
 
         const submitbuttonElement = screen.getByRole("button")
         expect(submitbuttonElement).toBeInTheDocument()
