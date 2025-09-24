@@ -40,6 +40,7 @@ export const Application = () => {
         </div>
         <button>Submit</button>
     </form>
+    <div data-testid="custom-element">CustomHTML element</div>
     </>
   )
 }

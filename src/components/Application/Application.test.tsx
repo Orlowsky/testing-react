@@ -59,6 +59,9 @@ describe("Application", () => {
 
         const submitbuttonElement = screen.getByRole("button")
         expect(submitbuttonElement).toBeInTheDocument()
+
+        const customElement = screen.getByTestId("custom-element")
+        expect(customElement).toBeInTheDocument()
    
         //arrange
         //act
