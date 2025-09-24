@@ -18,6 +18,12 @@ describe("Application", () => {
         //getByText
         const paragraphElement = screen.getByText("All Fields are mandatory")
         expect(paragraphElement).toBeInTheDocument()
+        //getByText with regex
+        const paragraphElement2 = screen.getByText(/all fields are mandatory/i)
+        expect(paragraphElement2).toBeInTheDocument()
+        //getByText with function (content, element) //content to zawartosc wewneatrz elementu //element to element html
+        const paragraphElement3 = screen.getByText((content, element) => content.startsWith("All"))
+        expect(paragraphElement3).toBeInTheDocument()
         //getByTitle
         const spanElement = screen.getByTitle("close")
         expect(spanElement).toBeInTheDocument()
