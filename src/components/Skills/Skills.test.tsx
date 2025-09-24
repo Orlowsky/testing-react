@@ -17,6 +17,21 @@ describe("Skills", () => {
     expect(listItemElements).toHaveLength(skills.length);
     expect(listItemElements[0]).toHaveTextContent("HTML");
   })
+
+  test("renders login button when user is not logged in", () => {
+    render(<Skills skills={skills} />);
+    const loginButton = screen.getByRole("button", { name: "Log in to start learning" });
+    expect(loginButton).toBeInTheDocument();
+  })
+
+  test("start learning button is not rendered when user is not logged in", () => {
+    render(<Skills skills={skills} />);
+    //queryByRole - returns null if element is not found
+    //use when you want to check that an element is not in the document
+    //all sufixes are same - get, query, find and are Role, LabelText, PlceholderText, Text, DisplayValue, AltText, Title, TestId
+    const startLearningButton = screen.queryByRole("button", { name: "Start Learning" });
+    expect(startLearningButton).not.toBeInTheDocument();
+  })
 });
 
 //pierwszy argunment to textMatch - string lub regex, funkcja lub obiekt
