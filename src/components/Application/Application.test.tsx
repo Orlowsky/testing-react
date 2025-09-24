@@ -18,6 +18,12 @@ describe("Application", () => {
         //getByText
         const paragraphElement = screen.getByText("All Fields are mandatory")
         expect(paragraphElement).toBeInTheDocument()
+        //getByTitle
+        const spanElement = screen.getByTitle("close")
+        expect(spanElement).toBeInTheDocument()
+        //getByAltText
+        const imageElement = screen.getByAltText("a person with a laptop")
+        expect(imageElement).toBeInTheDocument()
 
         const nameElement = screen.getByRole("textbox", {
             name: "Name"
@@ -33,7 +39,7 @@ describe("Application", () => {
         const nameElementByPlaceholderText = screen.getByPlaceholderText("Fullname")
         expect(nameElementByPlaceholderText).toBeInTheDocument()
         expect(nameElementByPlaceholderText.tagName).toBe("INPUT") //sprawdzenie czy to input jako html
-
+        //getByDisplayValue
         const nameElementByDisplayValue = screen.getByDisplayValue("olek")
         expect(nameElementByDisplayValue).toBeInTheDocument()
 

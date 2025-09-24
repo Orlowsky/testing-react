@@ -6,6 +6,8 @@ export const Application = () => {
     <h1>Job Aplication form</h1>
     <h2>Please fill out the form below</h2>
     <p>All Fields are mandatory</p>
+    <span title='close'>X</span>
+    <img src="http://via.placeholder.com/150" alt="a person with a laptop" />
     <form>
         <div>
             <label htmlFor="name">Name</label>
