@@ -5,10 +5,13 @@ export const Application = () => {
     <>
     <h1>Job Aplication form</h1>
     <h2>Please fill out the form below</h2>
+    <p>All Fields are mandatory</p>
     <form>
         <div>
             <label htmlFor="name">Name</label>
-            <input id="name" name="name" type="text" placeholder='Fullname'/>
+            <input id="name" name="name"
+             type="text" placeholder='Fullname' value='olek'
+             onChange={()=>{}}/>
         </div>
         <div>
             <label htmlFor="bio">Bio</label>

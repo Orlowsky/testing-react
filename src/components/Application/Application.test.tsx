@@ -14,6 +14,10 @@ describe("Application", () => {
             level: 2
         })
         expect(sectionHeadingElement).toBeInTheDocument()
+        
+        //getByText
+        const paragraphElement = screen.getByText("All Fields are mandatory")
+        expect(paragraphElement).toBeInTheDocument()
 
         const nameElement = screen.getByRole("textbox", {
             name: "Name"
@@ -29,6 +33,9 @@ describe("Application", () => {
         const nameElementByPlaceholderText = screen.getByPlaceholderText("Fullname")
         expect(nameElementByPlaceholderText).toBeInTheDocument()
         expect(nameElementByPlaceholderText.tagName).toBe("INPUT") //sprawdzenie czy to input jako html
+
+        const nameElementByDisplayValue = screen.getByDisplayValue("olek")
+        expect(nameElementByDisplayValue).toBeInTheDocument()
 
         const bioElement = screen.getByRole("textbox", {
             name: "Bio"
