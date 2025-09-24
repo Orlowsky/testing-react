@@ -25,6 +25,10 @@ describe("Application", () => {
             selector: "input"
         })
         expect(nameElementByLabelText).toBeInTheDocument()
+        //getByPlaceholderText
+        const nameElementByPlaceholderText = screen.getByPlaceholderText("Fullname")
+        expect(nameElementByPlaceholderText).toBeInTheDocument()
+        expect(nameElementByPlaceholderText.tagName).toBe("INPUT") //sprawdzenie czy to input jako html
 
         const bioElement = screen.getByRole("textbox", {
             name: "Bio"
