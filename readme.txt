@@ -15,3 +15,16 @@ to co sie wyswietli sprawdzic czy sie wyswietliło
 
 nie testowac komponentow ktore juz istnieją lub zewnetrznych
 testować żeczy które sa ważne z punktu widzenia usera
+
+
+ktore metody w pierwszej kolejnosci(test powinien przypominac interakcje przez usera):
+getByRole
+getByLabelText
+getByPlaceholderText
+getByText
+getByDisplayValue
+getByAltText (rozne dla roznych urzadzeń, nie widoczne dla uzytkownika)
+getByTitle
+getByTestId (najmniej polecana metoda, bo nie przypomina interakcji usera)
+
+

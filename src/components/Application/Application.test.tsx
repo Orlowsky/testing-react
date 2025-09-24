@@ -59,7 +59,7 @@ describe("Application", () => {
 
         const submitbuttonElement = screen.getByRole("button")
         expect(submitbuttonElement).toBeInTheDocument()
-
+        //getByTestId
         const customElement = screen.getByTestId("custom-element")
         expect(customElement).toBeInTheDocument()
    
@@ -68,3 +68,13 @@ describe("Application", () => {
         //assert
     })
 })
+
+//ktore metody w pierwszej kolejnosci(test powinien przypominac interakcje przez usera):
+//getByRole
+//getByLabelText
+//getByPlaceholderText
+//getByText
+//getByDisplayValue
+//getByAltText (rozne dla roznych urzadzeń, nie widoczne dla uzytkownika)
+//getByTitle
+//getByTestId (najmniej polecana metoda, bo nie przypomina interakcji usera)
