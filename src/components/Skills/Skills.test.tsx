@@ -21,3 +21,5 @@ describe("Skills", () => {
 
 //pierwszy argunment to textMatch - string lub regex, funkcja lub obiekt
 //screen.getByText(/html/i) - regex
+//screen.getByText((content, element) => content.startsWith("H"))
+
