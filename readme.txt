@@ -27,4 +27,7 @@ getByAltText (rozne dla roznych urzadzeń, nie widoczne dla uzytkownika)
 getByTitle
 getByTestId (najmniej polecana metoda, bo nie przypomina interakcji usera)
 
+//all sufixes are same - get, query, find and are Role, LabelText, PlceholderText, Text, DisplayValue, AltText, Title, TestId
+  const startLearningButton = await screen.findByRole("button", {
+
 
