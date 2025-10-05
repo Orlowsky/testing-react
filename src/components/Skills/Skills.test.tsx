@@ -1,4 +1,4 @@
-import { logRoles, render, screen } from "@testing-library/react";
+import { /* logRoles, */ render, screen } from "@testing-library/react";
 import { Skills } from "./Skills";
 
 describe("Skills", () => {
@@ -34,7 +34,7 @@ describe("Skills", () => {
   })
 
   test("Start Learning button is eventually displayed", async () => {
-  const view = render(<Skills skills={skills} />);
+  /* const view =  */render(<Skills skills={skills} />);
     //logRoles(view.container);
   //screen.debug();
   //findBy - returns a promise and we need to await it
