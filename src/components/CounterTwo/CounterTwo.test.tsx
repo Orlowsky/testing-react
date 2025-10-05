@@ -16,7 +16,7 @@ describe("CounterTwo", () => {
         count={0}
         handleIncrement={incrementMockHandle}
         handleDecrement={decrementMockHandle}
-      />
+      />,
     );
     const incrementButton = screen.getByText("Increment");
     const decrementButton = screen.getByText("Decrement");

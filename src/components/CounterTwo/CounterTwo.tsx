@@ -1,17 +1,17 @@
-import React from 'react'
-import { CounterTwoProps } from './CounterTwo.types'
+import React from "react";
+import { CounterTwoProps } from "./CounterTwo.types";
 
-export const CounterTwo = (props:CounterTwoProps) => {
+export const CounterTwo = (props: CounterTwoProps) => {
   return (
     <div>
-        <h1>Counter Two</h1>
-        <h2>Count: {props.count}</h2>
-        {props.handleIncrement &&
-         <button onClick={props.handleIncrement}>Increment</button>
-         }
-        {props.handleDecrement &&
-         <button onClick={props.handleDecrement}>Decrement</button>
-        }
+      <h1>Counter Two</h1>
+      <h2>Count: {props.count}</h2>
+      {props.handleIncrement && (
+        <button onClick={props.handleIncrement}>Increment</button>
+      )}
+      {props.handleDecrement && (
+        <button onClick={props.handleDecrement}>Decrement</button>
+      )}
     </div>
-  )
-}
+  );
+};

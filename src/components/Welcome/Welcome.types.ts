@@ -1,3 +1,3 @@
 export type WelcomeProps = {
-    name?: string
-}
+  name?: string;
+};
